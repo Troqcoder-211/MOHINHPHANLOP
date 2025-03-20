@@ -1,9 +1,10 @@
-import Navbar from "./components/Navbar/Navbar";
+import HomePage from "./pages/Home/HomePage.jsx";
+
 function App() {
   return (
     <>
-      <div>
-        <Navbar />
+      <div className="app">
+        <HomePage />
       </div>
     </>
   );

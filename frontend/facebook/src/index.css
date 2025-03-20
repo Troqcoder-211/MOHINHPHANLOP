@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@plugin "daisyui";
+/* @plugin "daisyui"; */
 
 @theme {
   --breakpoint-sm: 640px;
@@ -12,27 +12,27 @@
   --color-active: #25B74D;
 }
 
-/* :root {
+:root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-} */
+}
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 24, 25, 26;
     --background-end-rgb: 24, 25, 26;
   }
-} */
+}
 
-/* @layer utilities {
+@layer utilities {
   .text-balance {
     text-wrap: balance;
   }
-} */
+}
 
-/* @layer base {
+@layer base {
   :root {
     --background: 0 0% 95%;
     --background-header: 0 0% 100%;
@@ -61,12 +61,11 @@
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
   }
-
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
-    --card: 0 0% 15.4%;
-    --card-foreground: 0 0% 15.4%;
+    --card:  0 0% 15.4%;
+    --card-foreground:  0 0% 15.4%;
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
     --primary: 0 0% 98%;
@@ -87,8 +86,15 @@
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
-    --background: 0 0% 9.4%;
-  
+    --background: 0 0% 9.4%; /* This corresponds to rgb(24, 25, 26) */
+  }
+}
+
+/* @layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 } */
-
