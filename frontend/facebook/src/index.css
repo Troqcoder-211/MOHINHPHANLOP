@@ -89,7 +89,6 @@
     --background: 0 0% 9.4%; /* This corresponds to rgb(24, 25, 26) */
   }
 }
-
 /* @layer base {
   * {
     @apply border-border;

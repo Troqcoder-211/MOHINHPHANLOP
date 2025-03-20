@@ -8,6 +8,9 @@ import { faFacebookMessenger } from "@fortawesome/free-brands-svg-icons";
 import { faBell } from "@fortawesome/free-solid-svg-icons";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { faBookmark } from "@fortawesome/free-regular-svg-icons";
+
 const assets = {
   faHouse,
   faUserGroup,
@@ -18,6 +21,8 @@ const assets = {
   faBell,
   faChevronDown,
   faBars,
+  faArrowLeft,
+  faBookmark,
 };
 
 export default assets;
