@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { IoVideocamSharp } from "react-icons/io5";
+// import { IoVideocamSharp } from "react-icons/io5";
 import { MdOutlinePhotoLibrary } from "react-icons/md";
 import { GoSmiley } from "react-icons/go";
 import { MdOutlineClose } from "react-icons/md";
@@ -84,7 +84,7 @@ const WhatsOnYourMind = () => {
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          placeholder="What's on your mind?"
+          placeholder="Bạn đăng nghĩ gì?"
         />
       </div>
 
@@ -103,16 +103,16 @@ const WhatsOnYourMind = () => {
         </div>
       )}
 
-      <div className="flex justify-between px-4 pt-6">
-        <div className="flex items-center gap-2 cursor-pointer">
+      <div className="flex justify-around px-4 pt-6">
+        {/* <div className="flex items-center gap-2 cursor-pointer">
           <IoVideocamSharp className="text-[#E42645] text-[30px]" />
           <p className="text-gray-500 font-medium">Live Video</p>
-        </div>
+        </div> */}
 
         <label htmlFor="filePicker">
           <div className="flex items-center gap-2 cursor-pointer">
             <MdOutlinePhotoLibrary className="text-[#41B35D] text-[30px]" />
-            <p className="text-gray-500 font-medium">Photo/video</p>
+            <p className="text-gray-500 font-medium">Ảnh / Video</p>
           </div>
 
           <input
@@ -128,7 +128,7 @@ const WhatsOnYourMind = () => {
 
         <div className="hidden sm:flex items-center gap-2 cursor-pointer">
           <GoSmiley className="text-[#ECBF55] text-[30px]" />
-          <p className="text-gray-500 font-medium">Feeling/activity</p>
+          <p className="text-gray-500 font-medium">Cảm nghĩ / Hoạt động</p>
         </div>
       </div>
 

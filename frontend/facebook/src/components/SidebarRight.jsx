@@ -12,7 +12,7 @@ const SidebarRight = () => {
           <h1 className="font-semibold text-gray-600 text-[18px]">
             Yêu cầu kết bạn
           </h1>
-          <p className="text-primary">Xem tất cả</p>
+          <p className="text-[#1B74E4]">Xem tất cả</p>
         </div>
 
         <div className="mt-4">
@@ -21,7 +21,9 @@ const SidebarRight = () => {
           <div className="h-[2px] bg-gray-300 my-5"></div>
 
           <div className="flex items-center justify-between">
-            <h1 className="font-semibold text-gray-600 text-[18px]">Liên hệ</h1>
+            <h1 className="font-semibold text-gray-600 text-[18px]">
+              Người liên hệ
+            </h1>
             <div className="flex gap-4">
               <RiVideoAddFill className="text-gray-600" />
               <BiSearch />
@@ -29,20 +31,6 @@ const SidebarRight = () => {
             </div>
           </div>
 
-          <Contact />
-          <Contact />
-          <Contact />
-          <Contact />
-          <Contact />
-          <Contact />
-          <Contact />
-          <Contact />
-          <Contact />
-          <Contact />
-          <Contact />
-          <Contact />
-          <Contact />
-          <Contact />
           <Contact />
           <Contact />
           <Contact />

@@ -2,7 +2,7 @@ import assetsImgs from "../assets/imgs/LibraryImgs";
 
 const FriendRequests = () => {
   return (
-    <div>
+    <div className="py-2 hover:bg-gray-300 hover:rounded-2xl">
       <div className="flex gap-2 w-[100%]">
         <img
           className="h-[50px] w-[50px] rounded-full object-cover"
@@ -13,7 +13,7 @@ const FriendRequests = () => {
           <h1 className="font-semibold">Nguyễn Thành Trọng</h1>
           <p className="text-gray-500 text-[14px]">11 bạn chung</p>
         </div>
-        <p className="ml-auto text-primary text-[14px]">1 ngày trước</p>
+        <p className="ml-auto text-[#1B74E4] text-[14px]">1 ngày trước</p>
       </div>
 
       <div className="mt-4 flex justify-end gap-2">
