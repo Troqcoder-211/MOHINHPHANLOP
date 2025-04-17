@@ -1,13 +1,35 @@
-// import React from "react";
+import { useState } from "react";
 import { BsMessenger } from "react-icons/bs";
 import { AiFillHome } from "react-icons/ai";
 import { IoNotifications } from "react-icons/io5";
 
 import assetsImgs from "../assets/imgs/LibraryImgs";
 import NavbarLeft from "./NavbarLeft";
+import ProfileMenu from "./ProfileMenu";
+import MessengerChat from "./MessengerChat";
+import NotificationList from "./NotificationList";
 // import { signOut, useSession } from "next-auth/react";
 
 const Navbar = () => {
+  const [isOpenProfile, setIsOpen] = useState(false);
+  const [isOpenMessenger, setIsOpenMessenger] = useState(false);
+  const [isOpenNotification, setIsOpenNotification] = useState(false);
+  const handleOpenProfileMenu = () => {
+    setIsOpen(!isOpenProfile);
+    setIsOpenMessenger(false);
+    setIsOpenNotification(false);
+  };
+  const handleOpenMessenger = () => {
+    setIsOpenMessenger(!isOpenMessenger);
+    setIsOpenNotification(false);
+    setIsOpen(false);
+  };
+
+  const handleOpenNotification = () => {
+    setIsOpenNotification(!isOpenNotification);
+    setIsOpenMessenger(false);
+    setIsOpen(false);
+  };
   return (
     <div className="py-2 px-4 bg-white shadow-md flex justify-between items-center top-0 sticky z-50 dark:bg-[#1c1e21]">
       <div className="relative">
@@ -15,13 +37,13 @@ const Navbar = () => {
       </div>
 
       {/* Navbar */}
-      <div className="hidden lg:flex items-center gap-[100px] text-[30px] text-gray-500">
+      <div className="hidden lg:flex items-center  text-[30px] text-gray-500">
         <div className="relative">
           <AiFillHome className="hover:text-[#1B74E4] dark:text-white" />
           <div className="absolute bg-[#1B74E4] -left-[40px] h-[3px] w-[110px] -bottom-[16px]"></div>
         </div>
 
-        <svg
+        {/* <svg
           className="hover:text-[#1B74E4] dark:text-white"
           viewBox="0 0 28 28"
           fill="currentColor"
@@ -38,24 +60,38 @@ const Navbar = () => {
           width="28"
         >
           <path d="M23.5 9.5H10.25a.75.75 0 00-.75.75v7c0 .414.336.75.75.75H17v5.5H4.5v-19h19v5zm0 14h-5v-6.25a.75.75 0 00-.75-.75H11V11h12.5v12.5zm1.5.25V4.25C25 3.561 24.439 3 23.75 3H4.25C3.561 3 3 3.561 3 4.25v19.5c0 .689.561 1.25 1.25 1.25h19.5c.689 0 1.25-.561 1.25-1.25z"></path>
-        </svg>
+        </svg> */}
       </div>
 
-      <div className="flex items-center gap-4">
-        <div className="icon_wrapper text-[20px] dark:bg-[#333334]">
-          <BsMessenger className="hover:text-[#1B74E4] dark:text-white " />
+      <div className="flex items-center gap-4 relative">
+        <div className="icon_wrapper text-[20px] dark:bg-[#333334] ">
+          <button onClick={handleOpenMessenger}>
+            <BsMessenger className="hover:text-[#1B74E4] dark:text-white " />
+          </button>
         </div>
 
-        <div className="icon_wrapper text-[20px] dark:bg-[#333334]">
-          <IoNotifications className="hover:text-[#1B74E4] dark:text-white" />
+        <div className="icon_wrapper text-[20px] dark:bg-[#333334] ">
+          <button onClick={handleOpenNotification}>
+            <IoNotifications className="hover:text-[#1B74E4] dark:text-white" />
+          </button>
         </div>
 
-        <img
-          className="w-[44px] h-[44px] object-cover cursor-pointer rounded-full"
-          src={assetsImgs.Profile}
-          alt="dp"
-          //   onClick={signOut}
-        />
+        <div className="flex items-center ">
+          <button onClick={handleOpenProfileMenu}>
+            <img
+              className="w-[44px] h-[44px] object-cover cursor-pointer rounded-full"
+              src={assetsImgs.Profile}
+              alt="dp"
+              //   onClick={signOut}
+            />
+          </button>
+        </div>
+
+        <div className="absolute top-12 right-0 mb-4 w-[344.8px] h-[466.8px]">
+          {isOpenMessenger && <MessengerChat />}
+          {isOpenNotification && <NotificationList />}
+          {isOpenProfile && <ProfileMenu />}
+        </div>
       </div>
     </div>
   );

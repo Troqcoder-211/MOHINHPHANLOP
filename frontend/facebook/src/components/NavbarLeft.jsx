@@ -23,7 +23,7 @@ const NavbarLeft = () => {
     <div
       ref={divRef}
       id="seacrhResult"
-      className="z-52 h-0 bg-white dark:bg-[#1c1e21] shadow-neutral-500 absolute rounded-2xl transform  -translate-x-1 top-[-36px] left-[-12px]"
+      className="z-52 h-0 bg-white dark:bg-[#1c1e21] shadow-neutral-500 shadow-2xl absolute rounded-2xl transform  -translate-x-1 top-[-36px] left-[-12px]"
     >
       <div className="flex flex-col items-center gap-2 p-4">
         <div className="flex items-center gap-2  ">

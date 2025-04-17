@@ -13,12 +13,12 @@ const LeftSidebar = () => {
       <div className="flex flex-col gap-2">
         <SidebarRow image={assetsImgs.Profile} text={"Nguyễn Thành Trọng"} />
         <SidebarRow image={assetsImgs.Friends} text="Bạn bè" />
-        <SidebarRow image={assetsImgs.Groups} text="Nhóm" />
-        <SidebarRow image={assetsImgs.Market} text="Marketplace" />
-        <SidebarRow image={assetsImgs.Save} text="Lưu" />
-        <SidebarRow image={assetsImgs.Pages} text="Trang" />
+        {/* <SidebarRow image={assetsImgs.Groups} text="Nhóm" /> */}
+        {/* <SidebarRow image={assetsImgs.Market} text="Marketplace" /> */}
+        {/* <SidebarRow image={assetsImgs.Save} text="Lưu" /> */}
+        {/* <SidebarRow image={assetsImgs.Pages} text="Trang" />
         <SidebarRow image={assetsImgs.Events} text="Sự kiện" />
-        <SidebarRow image={assetsImgs.MostRecent} text="Gần đây nhất" />
+        <SidebarRow image={assetsImgs.MostRecent} text="Gần đây nhất" /> */}
 
         {/* <div className="flex items-center gap-3 w-[300px] py-2 pl-1 cursor-pointer hover:bg-gray-300">
           <div className="bg-gray-300 h-[30px] w-[30px] grid place-items-center rounded-full">
@@ -29,7 +29,7 @@ const LeftSidebar = () => {
 
         <p className="text-[14px] text-gray-500 mt-2">
           Privacy · Terms · Advertising · Ad choices · <br /> Cookies · Meta ©
-          2022
+          2025
         </p>
       </div>
     </div>
