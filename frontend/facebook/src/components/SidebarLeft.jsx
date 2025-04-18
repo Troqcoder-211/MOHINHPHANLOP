@@ -13,9 +13,9 @@ const LeftSidebar = () => {
       <div className="flex flex-col gap-2">
         <SidebarRow image={assetsImgs.Profile} text={"Nguyễn Thành Trọng"} />
         <SidebarRow image={assetsImgs.Friends} text="Bạn bè" />
-        {/* <SidebarRow image={assetsImgs.Groups} text="Nhóm" /> */}
+        <SidebarRow image={assetsImgs.Save} text="Lưu" />
+        <SidebarRow image={assetsImgs.Groups} text="Nhóm" />
         {/* <SidebarRow image={assetsImgs.Market} text="Marketplace" /> */}
-        {/* <SidebarRow image={assetsImgs.Save} text="Lưu" /> */}
         {/* <SidebarRow image={assetsImgs.Pages} text="Trang" />
         <SidebarRow image={assetsImgs.Events} text="Sự kiện" />
         <SidebarRow image={assetsImgs.MostRecent} text="Gần đây nhất" /> */}
