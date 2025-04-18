@@ -1,33 +1,33 @@
 import { useState } from "react";
-import { BsMessenger } from "react-icons/bs";
+// import { BsMessenger } from "react-icons/bs";
 import { AiFillHome } from "react-icons/ai";
 import { IoNotifications } from "react-icons/io5";
 
 import assetsImgs from "../assets/imgs/LibraryImgs";
 import NavbarLeft from "./NavbarLeft";
 import ProfileMenu from "./ProfileMenu";
-import MessengerChat from "./MessengerChat";
+// import MessengerChat from "./MessengerChat";
 import NotificationList from "./NotificationList";
 // import { signOut, useSession } from "next-auth/react";
 
 const Navbar = () => {
   const [isOpenProfile, setIsOpen] = useState(false);
-  const [isOpenMessenger, setIsOpenMessenger] = useState(false);
+  // const [isOpenMessenger, setIsOpenMessenger] = useState(false);
   const [isOpenNotification, setIsOpenNotification] = useState(false);
   const handleOpenProfileMenu = () => {
     setIsOpen(!isOpenProfile);
-    setIsOpenMessenger(false);
+    // setIsOpenMessenger(false);
     setIsOpenNotification(false);
   };
-  const handleOpenMessenger = () => {
-    setIsOpenMessenger(!isOpenMessenger);
-    setIsOpenNotification(false);
-    setIsOpen(false);
-  };
+  // const handleOpenMessenger = () => {
+  //   setIsOpenMessenger(!isOpenMessenger);
+  //   setIsOpenNotification(false);
+  //   setIsOpen(false);
+  // };
 
   const handleOpenNotification = () => {
     setIsOpenNotification(!isOpenNotification);
-    setIsOpenMessenger(false);
+    // setIsOpenMessenger(false);
     setIsOpen(false);
   };
   return (
@@ -64,11 +64,11 @@ const Navbar = () => {
       </div>
 
       <div className="flex items-center gap-4 relative">
-        <div className="icon_wrapper text-[20px] dark:bg-[#333334] ">
+        {/* <div className="icon_wrapper text-[20px] dark:bg-[#333334] ">
           <button onClick={handleOpenMessenger}>
             <BsMessenger className="hover:text-[#1B74E4] dark:text-white " />
           </button>
-        </div>
+        </div> */}
 
         <div className="icon_wrapper text-[20px] dark:bg-[#333334] ">
           <button onClick={handleOpenNotification}>
@@ -88,7 +88,7 @@ const Navbar = () => {
         </div>
 
         <div className="absolute top-12 right-0 mb-4 w-[344.8px] h-[466.8px]">
-          {isOpenMessenger && <MessengerChat />}
+          {/* {isOpenMessenger && <MessengerChat />} */}
           {isOpenNotification && <NotificationList />}
           {isOpenProfile && <ProfileMenu />}
         </div>
